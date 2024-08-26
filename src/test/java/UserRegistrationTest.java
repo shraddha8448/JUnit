@@ -39,4 +39,14 @@ public class UserRegistrationTest {
         mobNo = "2345135";
         assertFalse(UserRegistration.validateMobNo(mobNo));
     }
+
+    @Test
+    void testPasswordValidation(){
+        String password = "Shraddha@123";
+        assertTrue(UserRegistration.validatePassword(password));
+
+        password = "shraddha123";
+        assertFalse(UserRegistration.validatePassword(password));
+    }
+
 }
