@@ -1,7 +1,13 @@
 package org.example;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class UserRegistration {
-    public static void main(String[] args) {
-        System.out.println("User Registration form");
+
+    private static final String userFirstNameRegex = "^[A-Z]{1}[a-z]{2,}$";
+
+    public static boolean validateUserFirstName(String firstName) {
+        return Pattern.matches(userFirstNameRegex, firstName);
     }
+
 }
