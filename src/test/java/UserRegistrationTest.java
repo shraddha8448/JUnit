@@ -30,5 +30,13 @@ public class UserRegistrationTest {
         assertFalse(UserRegistration.validateEmailId(email));           // Invalid TLD length
     }
 
+    @Test
+    void testMobNoValidation(){
+        String mobNo = "+91 8975847382";
 
+        assertTrue(UserRegistration.validateMobNo(mobNo));
+
+        mobNo = "2345135";
+        assertFalse(UserRegistration.validateMobNo(mobNo));
+    }
 }
