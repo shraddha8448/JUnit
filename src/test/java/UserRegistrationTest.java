@@ -5,26 +5,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserRegistrationTest {
 
-//static BufferedReader br;
-
-//    @BeforeAll
-//    public static void getConnection(){
-//        br = new BufferedReader(new InputStreamReader(System.in));
-//    }
-
     @Test
     void testUserFirstName(){
         String firstName = "Shraddha";
         assertTrue(UserRegistration.validateUserFirstName(firstName));
     }
 
+    @Test
+    void testUserLastName(){
+        String firstName = "Shraddha";
 
-//    @AfterAll
-//    static void closedConnection(){
-//        try {
-//            br.close();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+        assertTrue(UserRegistration.validateUserFirstName(firstName));
+    }
+
 }
